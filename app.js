@@ -5,7 +5,7 @@ console.log(wmf);
 var books = document.querySelector('#book-list li .name');
 console.log(books);
 
-// will return every element with the 
+// will return every element under book-list id, with the class name
 books = document.querySelectorAll('#book-list li .name');
 console.log(books);
 
