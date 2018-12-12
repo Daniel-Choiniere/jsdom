@@ -1,21 +1,3 @@
-const titles = document.getElementsByClassName('title');
+const wrap = document.querySelector('#book-list li:nth-child(2) .name');;
+console.log(wrap);
 
-console.log(Array.isArray(titles));
-console.log(Array.isArray(Array.from(titles)));
-
-Array.from(titles).forEach(function(title){
-  console.log(title);
-});
-
-
-titles.forEach(function(item) {
-	console.log("item:" + item);
-});
-// const titles = document.getElementsByClassName('title');
-
-// console.log(Array.isArray(titles));
-// console.log(Array.isArray(Array.from(titles)));
-
-// Array.from(titles).forEach(function(title){
-//   console.log(title);
-// });
