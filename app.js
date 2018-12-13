@@ -1,13 +1,10 @@
-const titles = document.getElementsByClassName('title');
 
-console.log(Array.isArray(titles));
-console.log(Array.isArray(Array.from(titles)));
+const books = document.querySelectorAll('#book-list li .name');
 
-Array.from(titles).forEach(function(title){
-  console.log(title);
+Array.from(books).forEach(function(book){
+  book.textContent += ' (Book title)';
 });
 
-
-titles.forEach(function(item) {
-	console.log("item:" + item);
-});
+const bookList = document.querySelector('#book-list');
+bookList.innerHTML = '<h2>Books and more books...</h2>';
+bookList.innerHTML += '<p>This is how you add HTML content</p>';
