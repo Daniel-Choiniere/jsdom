@@ -1,7 +1,7 @@
-const listItems = document.querySelectorAll('#book-list ul li');
+const btns = document.querySelectorAll('#book-list .delete');
 
-Array.from(listItems).forEach(function(item){
-  item.addEventListener('click', (e) => {
+Array.from(btns).forEach(function(btn){
+  btn.addEventListener('click', function(e)  {
 
     const li = e.target.parentElement;
     console.log('child element to remove:', li);
