@@ -43,3 +43,4 @@ hideBox.addEventListener('change', function(e){
     list.style.display = "initial";
   }
 });
+
