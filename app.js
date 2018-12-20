@@ -47,20 +47,20 @@ hideBox.addEventListener('change', function(e){
   }
 });
 
-// filter books when user types into sesrch bar
-const searchBar = document.forms['search-books'].querySelector('input');
-searchBar.addEventListener('keyup', function(e) {
-  const term = e.target.value.toLowerCase();
-  const books = list.getElementsByTagName('li');
-  Array.from(books).forEach(function(book) {
-    const title = book.firstElementChild.textContent;
-    if(title.toLowerCase().indexOf(term) > 0){
-      book.style.display = 'block';
-    } else {
-      book.style.display = 'none';
-    }
+// filter books when user types into search bar
+  const searchBar = forms['search-books'].querySelector('input');
+  searchBar.addEventListener('keyup', (e) => {
+    const term = e.target.value.toLowerCase();
+    const books = list.getElementsByTagName('li');
+    Array.from(books).forEach((book) => {
+      const title = book.firstElementChild.textContent;
+      if(title.toLowerCase().indexOf(e.target.value) != -1){
+        book.style.display = 'block';
+      } else {
+        book.style.display = 'none';
+      }
+    });
   });
-});
 
 // tabbed content
 const tabs = document.querySelector('.tabs');
