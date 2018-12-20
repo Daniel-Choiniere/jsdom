@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
   
-  
 const list = document.querySelector('#book-list ul');
 const forms = document.forms;
 
@@ -47,7 +46,7 @@ hideBox.addEventListener('change', function(e){
   }
 });
 
-// filter books when user types into sesrch bar
+// filter books when user types into search bar
 const searchBar = document.forms['search-books'].querySelector('input');
 searchBar.addEventListener('keyup', function(e) {
   const term = e.target.value.toLowerCase();
