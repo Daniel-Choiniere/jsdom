@@ -1,4 +1,5 @@
 
+
 const btns = document.querySelectorAll('#book-list .delete');
 
 Array.from(btns).forEach(function(btn){
@@ -32,5 +33,14 @@ books = document.querySelectorAll('#book-list li .name');
 console.log(books);
 
 Array.from(books).forEach(function(book){
-  console.log(book);
+
+const list = document.querySelector('#book-list ul');
+
+// delete books
+list.addEventListener('click', function(e) {
+  if(e.target.className == 'delete'){
+    const li = e.target.parentElement;
+    li.parentNode.removeChild(li);
+  }
+
 });
